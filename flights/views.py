@@ -45,6 +45,7 @@ class CancelBooking(DestroyAPIView):
     queryset = Booking.objects.all()
     permission_classes = [IsOwner,IsFutureBooking]
     lookup_field = 'id'
+    
     lookup_url_kwarg = 'booking_id'
 
 
